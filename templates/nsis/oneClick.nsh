@@ -11,6 +11,7 @@
   !endif
 !endif
 
+!insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !ifdef BUILD_UNINSTALLER
   !insertmacro MUI_UNPAGE_INSTFILES
