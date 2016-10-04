@@ -29,7 +29,7 @@ Var installMode
         StrCpy $0 $1
         System::Call 'Ole32::CoTaskMemFree(ir2)'
       ${endif}
-      StrCpy $INSTDIR "$0\${PRODUCT_FILENAME}\${VERSION}"
+      StrCpy $INSTDIR "$0\${PRODUCT_FILENAME}"
     !endif
 
     # сhecks registry for previous installation path — for uninstall only, currently, installation path is not customizable
@@ -49,7 +49,7 @@ Var installMode
     StrCpy $installMode all
     SetShellVarContext all
 
-    StrCpy $INSTDIR "$PROGRAMFILES\${PRODUCT_FILENAME}\${VERSION}"
+    StrCpy $INSTDIR "$PROGRAMFILES\${PRODUCT_FILENAME}"
 
     # сhecks registry for previous installation path — for uninstall only, currently, installation path is not customizable
     ReadRegStr $perMachineInstallationFolder HKLM "${INSTALL_REGISTRY_KEY}" InstallLocation
