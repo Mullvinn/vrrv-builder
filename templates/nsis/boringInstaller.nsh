@@ -27,7 +27,6 @@
   !ifndef INSTALL_MODE_PER_ALL_USERS
     !insertmacro PAGE_INSTALL_MODE
   !endif
-  !insertmacro MUI_UNPAGE_DIRECTORY
   !insertmacro MUI_UNPAGE_INSTFILES
 !endif
 
