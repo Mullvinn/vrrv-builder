@@ -3,7 +3,7 @@
     Function StartApp
       !ifdef INSTALL_MODE_PER_ALL_USERS
         !include UAC.nsh
-        !insertmacro UAC_AsUser_ExecShell "" "$SMPROGRAMS\${PRODUCT_FILENAME}.lnk" "" "" ""
+        Exec '"$WINDIR\explorer.exe" "$SMPROGRAMS\${PRODUCT_FILENAME}.lnk"'
       !else
         ExecShell "" "$SMPROGRAMS\${PRODUCT_FILENAME}.lnk"
       !endif

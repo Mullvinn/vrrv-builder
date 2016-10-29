@@ -6,7 +6,7 @@
 
 !ifndef BUILD_UNINSTALLER
   Function StartApp
-    !insertmacro UAC_AsUser_ExecShell "" "$SMPROGRAMS\${PRODUCT_FILENAME}.lnk" "" "" ""
+    Exec '"$WINDIR\explorer.exe" "$SMPROGRAMS\${PRODUCT_FILENAME}.lnk"'
   FunctionEnd
 
   !define MUI_FINISHPAGE_RUN
